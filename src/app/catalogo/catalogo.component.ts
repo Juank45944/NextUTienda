@@ -22,4 +22,9 @@ export class CatalogoComponent implements OnInit {
       ) 
   }
 
+  onAddCarrito(nombre, cantidad){
+    let pedido = { nombre: nombre, cantidad: cantidad };
+    this.data.addCarrito(pedido);
+  }
+
 }

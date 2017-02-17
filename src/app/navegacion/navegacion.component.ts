@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'navegacion',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavegacionComponent implements OnInit {
 
-  constructor() { }
+  pedidos : any[];
+
+  constructor(private data : DataService) { }
 
   ngOnInit() {
+    this.pedidos = this.data.productosSeleccionados;
   }
 
 }

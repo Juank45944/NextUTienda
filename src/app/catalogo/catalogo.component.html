@@ -26,10 +26,10 @@
               <p><b>Precio: </b>${{item.precio}}</p>
               <p><b>Unidades disponibles: </b>{{item.unidades_disponibles}}</p>
               <div class="botones-cont">
-                <a href="#" class="btn btn-primary vermas" role="button">Ver más</a>
+                <a [routerLink]="['ver-producto', item.nombre]" class="btn btn-primary vermas" role="button">Ver más</a>
                 <div class="anadir-cont">
-                  <a href="#" class="btn btn-warning" role="button">Añadir</a>
-                  <input type="number" class="form-control" value="1" id="" aria-describedby="helpId" placeholder="">
+                  <a (click)="onAddCarrito(item.nombre, cantidad.value)" class="btn btn-warning" role="button">Añadir</a>
+                  <input #cantidad type="number" class="form-control" value="1" id="" aria-describedby="helpId" placeholder="">
                 </div>
               </div>
             </div>

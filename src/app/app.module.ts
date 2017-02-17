@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Angular2RoutingModule } from './app.routing.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -10,6 +11,9 @@ import { NavegacionComponent } from './navegacion/navegacion.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 
 import { DataService } from './data.service';
+import { DetalleComponent } from './detalle/detalle.component';
+import { VerProductoComponent } from './ver-producto/ver-producto.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,17 @@ import { DataService } from './data.service';
     LoginComponent,
     InicioComponent,
     NavegacionComponent,
-    CatalogoComponent
+    CatalogoComponent,
+    DetalleComponent,
+    VerProductoComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    Angular2RoutingModule,
+    ReactiveFormsModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
