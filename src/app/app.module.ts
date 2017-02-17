@@ -14,6 +14,7 @@ import { DataService } from './data.service';
 import { DetalleComponent } from './detalle/detalle.component';
 import { VerProductoComponent } from './ver-producto/ver-producto.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { DetalleCarritoComponent } from './detalle-carrito/detalle-carrito.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CarritoComponent } from './carrito/carrito.component';
     CatalogoComponent,
     DetalleComponent,
     VerProductoComponent,
-    CarritoComponent
+    CarritoComponent,
+    DetalleCarritoComponent
   ],
   imports: [
     BrowserModule,

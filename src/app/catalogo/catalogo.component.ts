@@ -22,9 +22,18 @@ export class CatalogoComponent implements OnInit {
       ) 
   }
 
-  onAddCarrito(nombre, cantidad){
-    let pedido = { nombre: nombre, cantidad: cantidad };
+  onAddCarrito(nombre, cantidad, imagen){
+    let precio = this.getPrecioProducto(nombre) * cantidad;
+    let pedido = { nombre: nombre, cantidad: cantidad, imagen: imagen, precio: precio };
     this.data.addCarrito(pedido);
+  }
+
+  getPrecioProducto(nombre){
+    for(let item of this.productos){
+      if(item.nombre == nombre){
+        return item.precio;
+      }
+    }
   }
 
 }

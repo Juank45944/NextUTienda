@@ -28,7 +28,7 @@
               <div class="botones-cont">
                 <a [routerLink]="['ver-producto', item.nombre]" class="btn btn-primary vermas" role="button">Ver más</a>
                 <div class="anadir-cont">
-                  <a (click)="onAddCarrito(item.nombre, cantidad.value)" class="btn btn-warning" role="button">Añadir</a>
+                  <a (click)="onAddCarrito(item.nombre, cantidad.value, item.imagen)" class="btn btn-warning" role="button">Añadir</a>
                   <input #cantidad type="number" class="form-control" value="1" id="" aria-describedby="helpId" placeholder="">
                 </div>
               </div>

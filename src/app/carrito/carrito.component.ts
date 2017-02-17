@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { NavegacionComponent } from '../navegacion/navegacion.component';
+import { DetalleCarritoComponent } from '../detalle-carrito/detalle-carrito.component';
 
 @Component({
-  selector: 'app-carrito',
+  selector: 'carrito',
   templateUrl: './carrito.component.html',
   styleUrls: ['./carrito.component.css']
 })

@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (data) => this.usuarios = data
       )
+    this.data.productosSeleccionados = [];
   }
 
   onSubmit(){
