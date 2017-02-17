@@ -7,20 +7,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NavegacionComponent } from './navegacion/navegacion.component';
+import { CatalogoComponent } from './catalogo/catalogo.component';
+
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     InicioComponent,
-    NavegacionComponent
+    NavegacionComponent,
+    CatalogoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
